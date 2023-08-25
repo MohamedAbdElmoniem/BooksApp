@@ -27,7 +27,7 @@ const mapBooksResponse = (response: any): Book[] => {
   return [];
 };
 
-const mapBookDetailsResponse = (response: any): Partial<BookDetails> => {
+const mapBookDetailsResponse = (response: any): BookDetails | undefined => {
   if (response) {
     return {
       id: response?.key?.replace('/works/', ''),
@@ -42,7 +42,7 @@ const mapBookDetailsResponse = (response: any): Partial<BookDetails> => {
       first_publish_year: response?.first_publish_date,
     };
   }
-  return {};
+  return undefined;
 };
 
 export {mapBooksResponse, mapBookDetailsResponse};

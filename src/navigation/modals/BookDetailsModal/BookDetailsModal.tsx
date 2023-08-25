@@ -12,13 +12,14 @@ import {getBookCover} from '../../../services/BooksService/BooksService';
 import {BookDetails} from '../../../services/BooksService/BooksMapper';
 import {BookCardButtons} from '../../../components';
 import LinearGradient from 'react-native-linear-gradient';
+import {Colors} from '../../../theme';
 
-const colors = ['rgba(255, 255, 255, 0)', 'white', 'white'];
+const colors = [Colors.transparent, Colors.white, Colors.white];
 
 type BookDetailsModalProps = {
   isVisible: boolean;
   onClose: () => void;
-  bookDetails: BookDetails;
+  bookDetails?: BookDetails;
 };
 
 const BookDetailsModal = ({

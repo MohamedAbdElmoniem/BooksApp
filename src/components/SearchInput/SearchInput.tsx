@@ -16,7 +16,7 @@ interface SearchInputProps extends TextInputProps {
   wrapperStyle: ViewStyle;
 }
 
-const SearchInput = (props: SearchInputProps) => {
+const SearchInput = (props: Partial<SearchInputProps>) => {
   const [searchValue, setSearchValue] = useState('');
 
   return (
@@ -27,9 +27,12 @@ const SearchInput = (props: SearchInputProps) => {
           value={searchValue}
           onChangeText={setSearchValue}
           style={[props.style, styles.input]}
-          placeholderTextColor={'gray'}
+          placeholderTextColor={Colors.gray}
+          testID="search-input"
         />
-        <Pressable onPress={() => props.onSearch(searchValue)}>
+        <Pressable
+          onPress={() => props.onSearch?.(searchValue)}
+          testID="search-button">
           <Image source={Images.search} style={styles.searchIcon} />
         </Pressable>
       </Row>

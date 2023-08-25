@@ -11,11 +11,14 @@ import {
 } from '../../redux/slices/booksSlice';
 
 type BookCardButtonsProps = {
-  wrapperStyle?: ViewStyle;
+  wrapperStyle: ViewStyle;
   bookId: string;
 };
 
-const BookCardButtons = ({wrapperStyle, bookId}: BookCardButtonsProps) => {
+const BookCardButtons = ({
+  wrapperStyle,
+  bookId,
+}: Partial<BookCardButtonsProps>) => {
   const dispatch = useAppDispatch();
   const wishList = useSelector((state: any) => state.books.wishList);
   const currentlyReading = useSelector(
@@ -40,11 +43,13 @@ const BookCardButtons = ({wrapperStyle, bookId}: BookCardButtonsProps) => {
   };
   return (
     <View style={[wrapperStyle, styles.btnsWrapper]}>
-      <Pressable onPress={handleFavouritePress}>
+      <Pressable onPress={handleFavouritePress} testID="favourite-button">
         <Image source={Images.star} style={styles.favourite(isFavourited)} />
       </Pressable>
       <View style={styles.spacer} />
-      <Pressable onPress={handleCurrentlyReadingPress}>
+      <Pressable
+        onPress={handleCurrentlyReadingPress}
+        testID="currently-reading-button">
         <Image
           source={Images.readingList}
           style={styles.currentlyReading(isCurrentlyReading)}

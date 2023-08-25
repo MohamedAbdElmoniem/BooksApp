@@ -3,6 +3,8 @@ const Colors = {
   purple: '#422040',
   gold: '#FFD700',
   gray: 'gray',
+  white: 'white',
+  transparent: 'rgba(255, 255, 255, 0)',
 };
 
 export default Colors;

@@ -19,7 +19,6 @@ function BooksList({booksList}: BooksListProps) {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    console.log('dataaaa', data);
     isLoading ? dispatch(setLoading(true)) : dispatch(setLoading(false));
     if (data) {
       setShowBookDetails(true);
