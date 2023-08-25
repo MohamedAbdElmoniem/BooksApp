@@ -22,7 +22,7 @@ Welcome to my React Native app that allows you to search for books on Open Libra
 
 Follow these steps to get the app up and running on your local environment:
 
-Clone this repository: git clone https://github.com/MohamedAbdElmoniem/BooksApp\
+Clone this repository: git clone https://github.com/MohamedAbdElmoniem/BooksApp \
 Navigate to the project folder: cd BooksApp\
 Install dependencies: npm install or yarn install\
 Start the development server: npm start or yarn start\
