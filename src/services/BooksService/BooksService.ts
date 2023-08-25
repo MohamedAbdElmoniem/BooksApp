@@ -30,7 +30,7 @@ const getBookDetails = async (id: string | number) => {
   }
 };
 
-const getBookCover = (id: string | number) =>
+const getBookCover = (id: string | number | undefined) =>
   `https://covers.openlibrary.org/b/id/${id}-M.jpg`;
 
 export {searchBooks, getBookDetails, getBookCover};

@@ -12,7 +12,7 @@ import {getBookCover} from '../../../services/BooksService/BooksService';
 import {BookDetails} from '../../../services/BooksService/BooksMapper';
 import {BookCardButtons} from '../../../components';
 import LinearGradient from 'react-native-linear-gradient';
-import {Colors} from '../../../theme';
+import {Colors, Images} from '../../../theme';
 
 const colors = [Colors.transparent, Colors.white, Colors.white];
 
@@ -40,6 +40,7 @@ const BookDetailsModal = ({
         </View>
         <View>
           <ImageBackground
+            defaultSource={Images.defaultBook}
             source={{uri: getBookCover(bookDetails?.cover_id)}}
             style={styles.cover}>
             <LinearGradient
@@ -76,12 +77,12 @@ const styles = StyleSheet.create({
   modal: {margin: 0, top: 180},
   modalContent: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
   },
   slideIndicatorContainer: {alignItems: 'center', top: -20},
   slideIndicator: {
     width: 130,
-    backgroundColor: 'black',
+    backgroundColor: Colors.black,
     height: 8,
     borderRadius: 4,
   },
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 10,
     right: 10,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     padding: 8,
     flexDirection: 'row',
     borderRadius: 10,

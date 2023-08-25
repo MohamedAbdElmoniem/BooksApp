@@ -42,12 +42,12 @@ const SearchInput = (props: Partial<SearchInputProps>) => {
 
 const styles = StyleSheet.create({
   input: {
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     flex: 1,
     borderRadius: 10,
     padding: 10,
     height: 55,
-    color: 'black',
+    color: Colors.black,
   },
   searchIcon: {
     width: 28,

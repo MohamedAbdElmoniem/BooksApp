@@ -10,6 +10,7 @@ import React from 'react';
 import {getBookCover} from '../../../services/BooksService/BooksService';
 import {BookCardButtons, Row} from '../../../components';
 import {Book} from '../../../services/BooksService/BooksMapper';
+import {Colors, Images} from '../../../theme';
 
 type BookItemProps = {
   item: Book;
@@ -20,6 +21,7 @@ const BookItem = ({item, onPress}: BookItemProps) => (
   <Pressable onPress={onPress}>
     <View style={styles.wrapper}>
       <Image
+        defaultSource={Images.defaultBook}
         source={{uri: getBookCover(item.cover_id)}}
         style={styles.bookImg}
       />
@@ -48,7 +50,7 @@ const BookItem = ({item, onPress}: BookItemProps) => (
 const styles = StyleSheet.create<ViewStyle | any>({
   wrapper: {
     flexDirection: 'row',
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     marginVertical: 12,
     padding: 15,
     borderRadius: 10,
