@@ -14,6 +14,8 @@ Welcome to my React Native app that allows you to search for books on Open Libra
 
 **Overlay Book Details:** Upon selecting a book, an overlay is displayed showing the book's details in a user-friendly manner.
 
+**Add to favourite/currently reading list:** you can add/remove selected book to favourites list or currently reading books list.
+
 **Swipe Down to Close book details overlay:** To close the book details overlay, users can simply swipe down, providing an intuitive way to navigate back to the search results.
 
 ## Getting Started
